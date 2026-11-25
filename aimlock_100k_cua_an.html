@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090909">
+<title>Aimlock 100k của An ☠️</title>
+<style>
+:root{color-scheme:dark;--bg:#090909;--panel:#171717;--line:#303030;--red:#ef4444;--muted:#aaa}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#301010 0,#090909 48%);color:#f5f5f5;font:16px system-ui,-apple-system,sans-serif;padding:env(safe-area-inset-top) 16px env(safe-area-inset-bottom)}
+main{max-width:560px;margin:0 auto;padding:22px 0 36px}.brand{display:flex;align-items:center;gap:13px}.logo{width:54px;height:54px;border-radius:16px;background:#260b0b;border:1px solid #7f1d1d;display:grid;place-items:center;font-size:27px}.sub{color:var(--muted);font-size:12px;letter-spacing:1.3px}.panel{background:#151515eF;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:16px;box-shadow:0 10px 35px #0008}h1{font-size:21px;margin:0 0 4px}h2{font-size:16px;margin:0 0 13px}.tag{font-size:11px;padding:5px 9px;border-radius:99px;background:#33210a;color:#fbbf24;border:1px solid #765016}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0}.muted{color:var(--muted);font-size:13px}input,select{width:100%;padding:13px;border-radius:11px;border:1px solid #444;background:#090909;color:white;font:inherit}button{border:0;border-radius:11px;padding:13px 15px;background:var(--red);color:white;font-weight:750;font-size:14px;width:100%;cursor:pointer}button.secondary{background:#292929;border:1px solid #444}button:disabled{opacity:.4}.switch{accent-color:#ef4444;width:20px;height:20px}.feature{padding:10px 0;border-bottom:1px solid #292929}.feature:last-child{border:0}.status{font-size:13px;color:#fbbf24;margin-top:10px}.good{color:#86efac}.range{width:100%;accent-color:#ef4444}.pill{display:inline-block;border:1px solid #444;border-radius:99px;padding:5px 9px;font-size:11px;color:#ddd}.hidden{display:none}.foot{font-size:12px;color:#999;line-height:1.5;margin-top:18px}
+</style>
+</head>
+<body><main>
+<header class="brand"><div class="logo">☠️</div><div style="flex:1"><h1>Aimlock 100k của An</h1><div class="sub">FREE FIRE CONTROL PANEL · V1.4</div></div><span class="tag">VIP SYSTEM</span></header>
+
+<section class="panel">
+<h2>🔑 KÍCH HOẠT KEY</h2>
+<div class="row"><span class="muted">Loại tài khoản</span><span class="pill" id="tierLabel">CHƯA KÍCH HOẠT</span></div>
+<input id="keyInput" placeholder="Nhập NORMAL KEY hoặc VIP KEY" autocomplete="off">
+<div style="height:10px"></div><button id="activate">KÍCH HOẠT KEY</button>
+<div id="keyStatus" class="status">Demo: NORMAL = AN100K · VIP = ANVIP100K</div>
+</section>
+
+<section class="panel hidden" id="normalPanel">
+<h2>🎯 CHỨC NĂNG NORMAL</h2>
+<div class="feature row"><span>Aimlock (giao diện mô phỏng)</span><input class="switch" type="checkbox"></div>
+<div class="feature row"><span>Aim cổ (tùy chọn mô phỏng)</span><input class="switch" type="checkbox"></div>
+<div class="feature row"><span>Aim normal (tùy chọn mô phỏng)</span><input class="switch" type="checkbox" checked></div>
+<div class="feature row"><span>Nhẹ tâm (thanh tinh chỉnh tham khảo)</span><input class="switch" type="checkbox" checked></div>
+<div class="feature row"><span>Hướng dẫn giảm lag</span><input class="switch" type="checkbox" checked></div>
+</section>
+
+<section class="panel hidden" id="vipPanel">
+<h2>👑 CHỨC NĂNG VIP</h2>
+<div class="feature row"><span>Toàn bộ chức năng NORMAL</span><span class="good">MỞ</span></div>
+<div class="feature row"><span>Tối ưu thiết lập theo thiết bị</span><span class="good">MỞ</span></div>
+<div class="feature row"><span>Gợi ý giải phóng dung lượng</span><span class="good">MỞ</span></div>
+<div class="feature row"><span>Định vị thiết bị của bạn (GPS)</span><button class="secondary" style="width:auto" id="locate">ĐỊNH VỊ</button></div>
+<div id="locationResult" class="muted"></div>
+</section>
+
+<section class="panel hidden" id="settingsPanel">
+<h2>⚙️ THIẾT LẬP THAM KHẢO</h2>
+<label class="muted" for="device">Thiết bị</label><div style="height:6px"></div>
+<select id="device"><option>iPhone</option><option>Android Samsung</option><option>Android Xiaomi / Redmi</option><option>Android OPPO / vivo</option><option>Android khác</option></select>
+<div class="row"><span>Độ nhạy tham khảo</span><strong id="sensValue">85</strong></div>
+<input class="range" id="sens" type="range" min="0" max="200" value="85">
+<p class="muted">Giá trị này chỉ lưu trong bảng điều khiển. Hãy nhập/chỉnh độ nhạy tương ứng trực tiếp trong cài đặt Free Fire để áp dụng.</p>
+<button class="secondary" id="save">LƯU THIẾT LẬP</button>
+<div id="saveStatus" class="status"></div>
+</section>
+
+<section class="panel hidden" id="lagPanel">
+<h2>🚀 GIẢM LAG & DUNG LƯỢNG</h2>
+<ul class="muted" style="padding-left:19px;line-height:1.7">
+<li>Đóng ứng dụng chạy nền trước khi chơi.</li><li>Để trống bộ nhớ máy và xóa video/ảnh không cần thiết.</li><li>Trong Free Fire, thử đồ họa Mượt và FPS phù hợp với máy.</li><li>Tắt tải xuống/cập nhật nền khi đang chơi.</li><li>Khởi động lại máy nếu game giật bất thường.</li>
+</ul>
+<p class="muted">Trang web không thể tự xóa cache ứng dụng, tăng FPS phần cứng hoặc sửa dữ liệu game.</p>
+</section>
+
+<p class="foot">Đây là bảng điều khiển Web Clip và công cụ lưu thiết lập. Các công tắc Aim/Aimlock chỉ là giao diện mô phỏng, không khóa mục tiêu, kéo tâm, định vị đối thủ hay can thiệp Free Fire. Định vị chỉ xin quyền vị trí của chính thiết bị và cần HTTPS.</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+let tier=localStorage.getItem('an_tier')||'';
+function render(){
+ $('tierLabel').textContent=tier?tier.toUpperCase():'CHƯA KÍCH HOẠT';
+ $('normalPanel').classList.toggle('hidden',!tier);
+ $('settingsPanel').classList.toggle('hidden',!tier);
+ $('lagPanel').classList.toggle('hidden',!tier);
+ $('vipPanel').classList.toggle('hidden',tier!=='vip');
+}
+render();
+$('activate').onclick=()=>{
+ const k=$('keyInput').value.trim().toUpperCase();
+ if(k==='AN100K'){tier='normal';$('keyStatus').textContent='Đã kích hoạt NORMAL (demo).';$('keyStatus').className='status good';}
+ else if(k==='ANVIP100K'){tier='vip';$('keyStatus').textContent='Đã kích hoạt VIP (demo).';$('keyStatus').className='status good';}
+ else {$('keyStatus').textContent='KEY không hợp lệ. Hãy kiểm tra lại.';$('keyStatus').className='status';return;}
+ localStorage.setItem('an_tier',tier);render();
+};
+$('sens').oninput=()=> $('sensValue').textContent=$('sens').value;
+$('save').onclick=()=>{
+ localStorage.setItem('an_device',$('device').value);
+ localStorage.setItem('an_sens',$('sens').value);
+ $('saveStatus').textContent='Đã lưu thiết lập trên trình duyệt này.';
+};
+$('device').value=localStorage.getItem('an_device')||'iPhone';
+$('sens').value=localStorage.getItem('an_sens')||'85';$('sensValue').textContent=$('sens').value;
+$('locate').onclick=()=>{
+ const out=$('locationResult');
+ if(!navigator.geolocation){out.textContent='Trình duyệt không hỗ trợ định vị.';return;}
+ out.textContent='Đang chờ bạn cấp quyền vị trí…';
+ navigator.geolocation.getCurrentPosition(p=>{out.textContent=`Vị trí thiết bị: ${p.coords.latitude.toFixed(4)}, ${p.coords.longitude.toFixed(4)} (chỉ hiển thị trên máy này).`;},e=>{out.textContent='Không lấy được vị trí: hãy cho phép quyền định vị và mở trang bằng HTTPS.';},{enableHighAccuracy:true,timeout:10000});
+};
+</script></body></html>
